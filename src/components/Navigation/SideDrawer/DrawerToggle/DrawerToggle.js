@@ -7,7 +7,7 @@ const drawerToggle = (props) => (
         <div></div>
         <div></div>
         <div></div>
-    </div>
+   MENU </div>
 );
 
 export default drawerToggle;

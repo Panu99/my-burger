@@ -7,10 +7,10 @@ import Modal from '../../components/UI/Modal/Modal';
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 
 const INGREDIENT_PRICES = {
-    salad: 0.5,
-    cheese: 0.4,
-    meat: 1.3,
-    bacon: 0.7
+    salad: 10.5,
+    cheese: 9.4,
+    IceCream: 13.0,
+    bacon: 20.7
 };
 
 class BurgerBuilder extends Component {
@@ -23,7 +23,7 @@ class BurgerBuilder extends Component {
             salad: 0,
             bacon: 0,
             cheese: 0,
-            meat: 0
+            IceCream: 0
         },
         totalPrice: 4,
         purchasable: false,
@@ -91,7 +91,7 @@ class BurgerBuilder extends Component {
         for ( let key in disabledInfo ) {
             disabledInfo[key] = disabledInfo[key] <= 0
         }
-        // {salad: true, meat: false, ...}
+        // {salad: true, IceCream: false, ...}
         return (
             <Aux>
                 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
